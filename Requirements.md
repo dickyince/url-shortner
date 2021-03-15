@@ -16,4 +16,4 @@ The following requirements were taken from the instructions presented in the [RE
 
 Here is a prototype diagram of the system to be built.
 
-![Prototype Class Diagram](ClassDiagram.png)
+![Prototype Class Diagram](Class%20Diagram.png)
