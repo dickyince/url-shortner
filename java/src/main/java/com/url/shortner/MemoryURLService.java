@@ -18,11 +18,16 @@ public class MemoryURLService implements URLService{
 
     @Override
     public int storeURL(String url) {
+        if(validator.isValid(url)) {
+            int id = urls.size() + 1;
+            urls.put(id, url);
+            return id;
+        }
         return 0;
     }
 
     @Override
     public String getURL(int id) {
-        return null;
+        return urls.get(id);
     }
 }
