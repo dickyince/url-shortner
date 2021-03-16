@@ -2,6 +2,7 @@
   <body>
     <% if defined?@url %>
         <p>Your url has been stroed with an id of: <%= @url.url_id %></p>
+        <p>Your shortened url is : <%= @base_route + "/" + @url.url_id %></p>
     <% end %>
     <form method="POST" action="/record_url">
       <label>Url to shorten</label>
