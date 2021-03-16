@@ -19,7 +19,7 @@ public class MemoryURLService implements URLService{
     @Override
     public int storeURL(String url) {
         if(validator.isValid(url)) {
-            int id = urls.size() + 1;
+            int id = getId();
             urls.put(id, url);
             return id;
         }
@@ -29,5 +29,9 @@ public class MemoryURLService implements URLService{
     @Override
     public String getURL(int id) {
         return urls.get(id);
+    }
+
+    private int getId() {
+        return urls.size() + 1;
     }
 }
