@@ -8,4 +8,12 @@ class Storage
     def self.get_url(id)
         Url.find_by url_id: id
     end
+
+    def self.get_url_id
+        Url.count + 1
+    end
+
+    def self.get_all_urls
+        Url.all
+    end
 end

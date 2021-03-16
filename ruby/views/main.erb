@@ -3,6 +3,8 @@
     <% if defined?@url %>
         <p>Your url has been stroed with an id of: <%= @url.url_id %></p>
         <p>Your shortened url is : <%= @base_route + "/" + @url.url_id %></p>
+    <% elsif defined?@error %>
+        <p><%= @error %></p>
     <% end %>
     <form method="POST" action="/record_url">
       <label>Url to shorten</label>
@@ -10,4 +12,5 @@
       <input type="submit" name="Shorten URL">
     </form>
   </body>
+  <a href="/show_all_urls">Show all stored URLs</a>
 </html>

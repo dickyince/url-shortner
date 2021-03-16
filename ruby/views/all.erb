@@ -1,0 +1,8 @@
+<html>
+  <body>
+    <a href="/">Url Shortener</a>
+    <% @urls.each do |url| %>
+        <p>ID: <%= url.url_id %> URL: <%= url.url %></p>
+    <% end %>
+  </body>
+</html>
