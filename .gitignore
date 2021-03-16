@@ -1,0 +1,5 @@
+.idea
+target
+out
+*.iml
+ruby/db/url-shortener.sqlite3
