@@ -18,8 +18,9 @@ end
 post '/record_url' do
     url = params['url_to_shorten']
     id = get_url_id
-    url = Storage.store_url(id, url)
-    "id = " + url.url_id + " : url = " + url.url
+    @url = Storage.store_url(id, url)
+#     redirect '/'
+    erb :main
 end
 
 def get_url_id

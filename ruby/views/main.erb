@@ -1,5 +1,8 @@
 <html>
   <body>
+    <% if defined?@url %>
+        <p>Your url has been stroed with an id of: <%= @url.url_id %></p>
+    <% end %>
     <form method="POST" action="/record_url">
       <label>Url to shorten</label>
       <input type="text" name="url_to_shorten">
